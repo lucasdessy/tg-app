@@ -1,4 +1,4 @@
-# sales_platform_app
+# TG APP
 
 A new Flutter project.
 

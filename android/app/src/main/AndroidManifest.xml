@@ -1,9 +1,31 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.sales_platform_app">
+    package="com.agroplatform">
+    <!-- Provide required visibility configuration for API level 30 and above -->
+    <queries>
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="http" />
+    </intent>
+    <intent>
+        <action android:name="android.intent.action.VIEW" />
+        <data android:scheme="https" />
+    </intent>
+    </queries>
+   <uses-permission android:name="android.permission.INTERNET" />
+       <!-- Permissions options for the `storage` group -->
+   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+   <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <application
-        android:label="sales_platform_app"
+        android:label="TG"
         android:name="${applicationName}"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/ic_launcher"
+        android:usesCleartextTraffic="true"
+        android:requestLegacyExternalStorage="true">
+        <meta-data android:name="google_analytics_automatic_screen_reporting_enabled" android:value="false" />
+        <activity
+            android:name="com.yalantis.ucrop.UCropActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"

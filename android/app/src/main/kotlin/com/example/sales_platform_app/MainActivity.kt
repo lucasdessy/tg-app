@@ -1,4 +1,4 @@
-package com.example.sales_platform_app
+package com.agroplatform
 
 import io.flutter.embedding.android.FlutterActivity
 

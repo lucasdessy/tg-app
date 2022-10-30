@@ -1,0 +1,4 @@
+enum LinkType {
+  telegram,
+  whatsappHelp,
+}
