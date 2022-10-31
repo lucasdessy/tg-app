@@ -9,4 +9,7 @@ class DownloadState with _$DownloadState {
     double? progress,
     String? error,
   }) = _DownloadState;
+  // Initial
+  factory DownloadState.initial() =>
+      const DownloadState(downloadType: DownloadType.horizontal);
 }

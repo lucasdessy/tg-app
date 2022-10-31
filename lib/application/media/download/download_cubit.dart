@@ -16,20 +16,10 @@ class DownloadCubit extends Cubit<DownloadState> with Printable {
   final AnalyticsService _analyticsService;
   final DownloadService _downloadService;
   DownloadCubit(this._analyticsService, this._downloadService)
-      : super(const DownloadState());
+      : super(DownloadState.initial());
 
   void clean() {
     emit(const DownloadState());
-  }
-
-  void setDownloadType(DownloadType downloadType) {
-    if (downloadType == state.downloadType) {
-      emit(state.copyWith(downloadType: null));
-    } else {
-      emit(
-        state.copyWith(downloadType: downloadType),
-      );
-    }
   }
 
   Future<void> download(String id) async {
